@@ -7,7 +7,7 @@ import { Organization } from "../models/organization.model";
 export class DataService {
     constructor(private http: HttpClient) {}
 
-    url = 'http://localhost:7000/';
+    url = 'https://tu-searchable-dir-my.vercel.app/';
 
     getNodes() {
         let url = this.url + 'nodes';
@@ -15,19 +15,19 @@ export class DataService {
     }
 
     search(keyword: string, searchBy='General') {
-        let url = this.url + 'search/';
+        let url = this.url + 'search';
         switch (searchBy) {
             case 'Personnel':
-                url += 'personnel/';
+                url += 'personnel';
                 break;
             case 'Program':
-                url += 'program/';
+                url += 'program';
                 break;
             case 'Organization':
-                url += 'organization_name/';
+                url += 'organization_name';
                 break;
             default:
-                url += 'general/';
+                url += 'general';
                 break;
         }
         let query = new HttpParams().append('keyword', keyword);
@@ -37,7 +37,7 @@ export class DataService {
     }
 
     editPersonnelDetails(personName:string,personTitle:string,imageUrl:string,personEmail:string,organization?:string,previousName?:string){
-        let url=this.url+'editPersonnel/'
+        let url=this.url+'editPersonnel'
         const body = {
             personName: personName,
             personTitle: personTitle,
@@ -55,7 +55,7 @@ export class DataService {
     }
 
     addPersonnel(personName:string,personTitle:string,imageUrl:string,personEmail:string,organization:string){
-        let url=this.url+'addPersonnel/'
+        let url=this.url+'addPersonnel'
         const body = {
             personName: personName,
             personTitle: personTitle,
@@ -72,7 +72,7 @@ export class DataService {
     }
 
     deletePersonnel(previousName?:string){
-        let url=this.url+'deletePersonnel/'
+        let url=this.url+'deletePersonnel'
         const body = {
             previousName:previousName
           };
@@ -85,7 +85,7 @@ export class DataService {
     }
 
     deleteNode(Node?:string){
-        let url=this.url+'deleteNode/'
+        let url=this.url+'deleteNode'
         const body = {
             Node:Node
           };
@@ -98,7 +98,7 @@ export class DataService {
     }
 
     addNode(instituteName:string,parentName?:string){
-        let url=this.url+'add/'
+        let url=this.url+'add'
         const body={
             instituteName:instituteName,
             info:{
@@ -118,7 +118,7 @@ export class DataService {
     }
 
     addProgram(programTitle:string,programDesc:string,organization:string){
-        let url=this.url+'addProgram/'
+        let url=this.url+'addProgram'
         const body = {
             programTitle:programTitle,
             programDesc:programDesc,
@@ -133,7 +133,7 @@ export class DataService {
     }
 
     deleteProgram(previousName?:string,organization?:string){
-        let url=this.url+'deleteProgram/'
+        let url=this.url+'deleteProgram'
         const body = {
             previousName:previousName,
             organization:organization
