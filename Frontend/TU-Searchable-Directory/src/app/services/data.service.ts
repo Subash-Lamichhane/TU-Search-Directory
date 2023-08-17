@@ -7,7 +7,7 @@ import { Organization } from "../models/organization.model";
 export class DataService {
     constructor(private http: HttpClient) {}
 
-    url = 'https://tu-searchable-dir-my.vercel.app/';
+    url = 'https://tu-searchable-dir-backend.vercel.app/';
 
     getNodes() {
         let url = this.url + 'nodes';

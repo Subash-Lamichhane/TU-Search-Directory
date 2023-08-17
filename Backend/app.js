@@ -13,7 +13,7 @@ const loginRoutes = require('./routes/loginRoutes.js');
 app = express();
 
 app.use(cors({
-    origin: ["https://re-tu-searchable-dir-frontend.vercel.app"],
+    origin: ["https://tu-searchable-dir-my.vercel.app/"],
     methods: ["POST", "GET"],
     credentials: true
 }));
