@@ -12,11 +12,12 @@ const loginRoutes = require('./routes/loginRoutes.js');
 
 app = express();
 
-app.use(cors({
-    origin: ["https://tu-searchable-dir-my.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true
-}));
+// app.use(cors({
+//     origin: ["https://tu-searchable-dir-my.vercel.app","https://tu-searchable-dir-backend.vercel.app/"],
+//     methods: ["POST", "GET"],
+//     credentials: true
+// }));
+app.use(cors());
 
  
 const PORT = 7000;
