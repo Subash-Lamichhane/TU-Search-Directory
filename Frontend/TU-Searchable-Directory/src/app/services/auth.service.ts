@@ -22,7 +22,7 @@ export class AuthService {
     }
 
     logIn(email:string, password: string) {
-        const url = 'https://tu-searchable-dir-backend.vercel.app:7000/login/';
+        const url = 'https://tu-searchable-dir-backend.vercel.app/login';
         // password = bcryptjs.hashSync(password, environment.SALT)
         // let SALT = '$2a$10$mLmYXYIw9FLvW7d4rXdple';
         // password = bcryptjs.hashSync(password, SALT)
@@ -33,7 +33,7 @@ export class AuthService {
     }
 
     signUp(name:string,email:string, password: string) {
-        const url = 'https://tu-searchable-dir-backend.vercel.app:7000/signup/';
+        const url = 'https://tu-searchable-dir-backend.vercel.app/signup';
         // let SALT = '$2a$10$mLmYXYIw9FLvW7d4rXdple';
         // password = bcryptjs.hashSync(password, SALT)
         
@@ -45,7 +45,7 @@ export class AuthService {
     }
 
     adminsignUp(name:string,email:string, password: string) {
-        const url = 'https://tu-searchable-dir-backend.vercel.app:7000/adminsignup/';
+        const url = 'https://tu-searchable-dir-backend.vercel.app/adminsignup';
         // let SALT = '$2a$10$mLmYXYIw9FLvW7d4rXdple';
         // password = bcryptjs.hashSync(password, SALT)
         
