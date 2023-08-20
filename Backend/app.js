@@ -11,12 +11,12 @@ const searchRoutes = require('./routes/searchRoutes');
 const loginRoutes = require('./routes/loginRoutes.js');
 
 app = express();
-
-app.use(cors({
-    origin: ["https://tu-searchable-dir-my.vercel.app","https://tu-searchable-dir-my.vercel.app/"],
-    methods: ["POST", "GET","post","get"],
-    credentials: true
-}));
+app.use(cors());
+// app.use(cors({
+//     origin: ["https://tu-searchable-dir-my.vercel.app","https://tu-searchable-dir-my.vercel.app/"],
+//     methods: ["POST", "GET","post","get"],
+//     credentials: true
+// }));
 
 
  
